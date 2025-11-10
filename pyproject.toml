@@ -1,0 +1,27 @@
+[project]
+name = "nmlr"
+version = "0.1.1"
+description = "Novel MAML Linear Regression methods"
+readme = "README.md"
+authors = [
+    { name = "Dušan Simić", email = "dusan.simic@dmi.uns.ac.rs" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "scikit-learn>=1.6.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+exclude = [
+    "data/*",
+    "examples/*",
+    "scripts/*",
+    "dist/*",
+]
+
+[tool.black]
+line-length = 80
