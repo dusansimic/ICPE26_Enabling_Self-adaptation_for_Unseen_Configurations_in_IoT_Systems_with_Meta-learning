@@ -19,7 +19,17 @@ Both scripts contain two identical parameters:
 1. `--dataset` which is not a required option and sepcifies a path to the dataset file which is used for the experiment (default path is `../data/edict11_scaled_tasks.pkl`),
 2. `--model` which is a required option and specifies the model that will be used for the experiment.
 
-When running the script with the `--help` option you can see which available models can you use for the experiment at hand.
+These are the models implemented in this repository and their short name for the `--model` option for each of these two scripts:
+
+|Model name|Baseline short name|Novel short name|
+|-|-|-|
+|Linear regression|`lnr`|`lnr`|
+|Lasso|`lss`|`lss`|
+|Ridge|`rdg`|`rdg`|
+|Decison tree|`dtr`|N/A|
+|Random forest|`rfr`|N/A|
+|SVR|`svr`|N/A|
+|KNN|`knn`|N/A|
 
 Options specific to the novel model implementation are:
 

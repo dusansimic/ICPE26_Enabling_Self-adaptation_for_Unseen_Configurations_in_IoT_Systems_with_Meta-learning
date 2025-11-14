@@ -7,7 +7,16 @@ from nmlr.loggers import ConsoleClassicTaskProgressLogger, JSONEvalutorLogger, C
 
 # Predefined values
 DATASET_FILE = "../data/edict11_scaled_tasks.pkl"
-VALID_MODEL_NAMES = ["lnr", "lss", "rdg", "dtr", "rfr", "svr"]
+models = {
+    "lnr": LinearRegression,
+    "lss": Lasso,
+    "rdg": Ridge,
+    "dtr": DecisionTree,
+    "rfr": RandomForest,
+    "svr": SVR,
+    "knn": KNN,
+}
+VALID_MODEL_NAMES = list(models.keys())
 
 # Create argument parser
 parser = argparse.ArgumentParser()
@@ -23,16 +32,6 @@ tasks = shuffle_task_samples(tasks)
 
 print("Splitting data...")
 train, test = get_train_and_eval_tasks_new(tasks)
-
-models = {
-    "lnr": LinearRegression,
-    "lss": Lasso,
-    "rdg": Ridge,
-    "dtr": DecisionTree,
-    "rfr": RandomForest,
-    "svr": SVR,
-    "knn": KNN,
-}
 
 Model = models[args.model]
 model = Model()
