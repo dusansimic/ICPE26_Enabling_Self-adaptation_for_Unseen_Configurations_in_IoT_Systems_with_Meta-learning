@@ -1,3 +1,5 @@
+# import sys
+# sys.path.insert(0, "../src")
 import argparse
 from nmlr.novel.impl import LinearRegression, Lasso, Ridge
 from nmlr.novel.exp import Experiment

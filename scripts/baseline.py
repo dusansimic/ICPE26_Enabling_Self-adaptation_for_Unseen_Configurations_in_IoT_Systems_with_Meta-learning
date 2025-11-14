@@ -1,3 +1,5 @@
+# import sys
+# sys.path.insert(0, "../src")
 import argparse
 from nmlr.classic.impl import LinearRegression, Lasso, Ridge, DecisionTree, RandomForest, SVR, KNN
 from nmlr.classic.exp import Experiment

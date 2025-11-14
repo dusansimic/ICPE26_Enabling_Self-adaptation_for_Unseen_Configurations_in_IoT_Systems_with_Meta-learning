@@ -3,6 +3,17 @@
 > [!NOTE]
 > This code repository contains MAML model implementations referenced in the ICPE26 paper (future reference).
 
+## Installation
+
+To use the novel MAML model implementations, you can either experiment with them in this repository by uncommenting the first two lines in the [baseline.py](./scripts/baseline.py) file and [novel.py](./scripts/novel.py) file which are needed to import the NMLR library.
+
+```python
+import sys
+sys.insert(0, "../src")
+```
+
+Another way is to build the library wheel file using the [uv](https://github.com/astral-sh/uv) package and project manager and later install the wheel file.
+
 ## Usage
 
 To use this implementation of baseline and novel MAML model implementations, you can follow this usage guide.
